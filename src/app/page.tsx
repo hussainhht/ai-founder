@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 type Category = {
   name: string;
   description: string;
@@ -51,30 +53,33 @@ export default function HomePage() {
 
             <ul className="hidden items-center gap-8 text-sm font-medium md:flex">
               <li>
-                <a href="#" className="text-slate-700 transition hover:text-slate-900">
+                <Link href="/" className="text-slate-700 transition hover:text-slate-900">
                   Home
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-slate-700 transition hover:text-slate-900">
+                <Link href="/explore" className="text-slate-700 transition hover:text-slate-900">
                   Tools
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-slate-700 transition hover:text-slate-900">
+                <a href="#categories" className="text-slate-700 transition hover:text-slate-900">
                   Categories
                 </a>
               </li>
               <li>
-                <a href="#" className="text-slate-700 transition hover:text-slate-900">
+                <a href="#featured-tools" className="text-slate-700 transition hover:text-slate-900">
                   Compare
                 </a>
               </li>
             </ul>
 
-            <button className="rounded-lg bg-slate-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-slate-700">
+            <Link
+              href="/explore"
+              className="rounded-lg bg-slate-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-slate-700"
+            >
               Explore Tools
-            </button>
+            </Link>
           </nav>
         </header>
 
@@ -91,31 +96,41 @@ export default function HomePage() {
               creativity, research, and more.
             </p>
 
-            <div className="mt-8 rounded-2xl border border-slate-200 bg-white p-3 shadow-sm">
+            <form action="/explore" className="mt-8 rounded-2xl border border-slate-200 bg-white p-3 shadow-sm">
               <div className="flex flex-col gap-3 sm:flex-row">
                 <input
+                  name="q"
                   type="text"
-                  placeholder="Search AI tools (UI only)"
+                  placeholder="Search AI tools"
                   className="h-11 w-full rounded-xl border border-slate-200 px-4 text-sm outline-none placeholder:text-slate-400 focus:border-slate-400"
                 />
-                <button className="h-11 rounded-xl bg-slate-900 px-5 text-sm font-semibold text-white transition hover:bg-slate-700">
+                <button
+                  type="submit"
+                  className="h-11 rounded-xl bg-slate-900 px-5 text-sm font-semibold text-white transition hover:bg-slate-700"
+                >
                   Explore Tools
                 </button>
               </div>
-            </div>
+            </form>
 
             <div className="mt-6 flex items-center justify-center gap-3">
-              <button className="rounded-xl bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-slate-700">
+              <Link
+                href="/explore"
+                className="rounded-xl bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-slate-700"
+              >
                 Explore Tools
-              </button>
-              <button className="rounded-xl border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-slate-800 transition hover:bg-slate-100">
+              </Link>
+              <a
+                href="#categories"
+                className="rounded-xl border border-slate-300 bg-white px-5 py-2.5 text-sm font-semibold text-slate-800 transition hover:bg-slate-100"
+              >
                 Browse Categories
-              </button>
+              </a>
             </div>
           </div>
         </section>
 
-        <section className="py-10">
+        <section id="categories" className="py-10">
           <div className="mb-6 flex items-end justify-between">
             <h2 className="text-2xl font-semibold tracking-tight">Featured Categories</h2>
           </div>
@@ -133,7 +148,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="py-10">
+        <section id="featured-tools" className="py-10">
           <div className="mb-6 flex items-end justify-between">
             <h2 className="text-2xl font-semibold tracking-tight">Featured Tools</h2>
           </div>
@@ -158,9 +173,12 @@ export default function HomePage() {
                   ))}
                 </div>
 
-                <button className="mt-5 rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-800 transition hover:bg-slate-100">
+                <Link
+                  href="/explore"
+                  className="mt-5 inline-block rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-800 transition hover:bg-slate-100"
+                >
                   View Details
-                </button>
+                </Link>
               </article>
             ))}
           </div>
@@ -175,16 +193,16 @@ export default function HomePage() {
           </div>
 
           <div className="flex gap-5">
-            <a href="#" className="transition hover:text-slate-900">
+            <Link href="/" className="transition hover:text-slate-900">
               Home
-            </a>
-            <a href="#" className="transition hover:text-slate-900">
+            </Link>
+            <Link href="/explore" className="transition hover:text-slate-900">
               Tools
-            </a>
-            <a href="#" className="transition hover:text-slate-900">
+            </Link>
+            <a href="#categories" className="transition hover:text-slate-900">
               Categories
             </a>
-            <a href="#" className="transition hover:text-slate-900">
+            <a href="#featured-tools" className="transition hover:text-slate-900">
               Compare
             </a>
           </div>
