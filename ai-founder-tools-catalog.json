@@ -1,0 +1,1985 @@
+{
+  "datasetName": "ai-founder-tools-catalog",
+  "source": {
+    "title": "كتالوج عالي الاستدعاء لأدوات الذكاء الاصطناعي المتاحة والمعلنة وصفحات التسجيل",
+    "basedOnUploadedFile": true,
+    "note": "Structured from the uploaded catalog; categories and use cases are simplified for directory/search use."
+  },
+  "generatedAt": "2026-03-17",
+  "toolCount": 97,
+  "tools": [
+    {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "categories": [
+        "chatbot",
+        "multimodal"
+      ],
+      "useCases": [
+        "chat",
+        "writing",
+        "analysis",
+        "general assistance"
+      ],
+      "officialUrl": "https://chatgpt.com",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "web",
+        "api"
+      ],
+      "shortDescription": "General AI assistant for conversation, writing, and analysis."
+    },
+    {
+      "id": "claude",
+      "name": "Claude",
+      "categories": [
+        "chatbot",
+        "search"
+      ],
+      "useCases": [
+        "chat",
+        "writing",
+        "document assistance"
+      ],
+      "officialUrl": "https://claude.com",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "web",
+        "api"
+      ],
+      "shortDescription": "Conversational assistant with free and paid plans."
+    },
+    {
+      "id": "gemini",
+      "name": "Gemini",
+      "categories": [
+        "chatbot",
+        "multimodal"
+      ],
+      "useCases": [
+        "chat",
+        "multimodal tasks",
+        "general assistance"
+      ],
+      "officialUrl": "https://gemini.google",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "web"
+      ],
+      "shortDescription": "Google assistant for chat and multimodal tasks."
+    },
+    {
+      "id": "microsoft-copilot",
+      "name": "Microsoft Copilot",
+      "categories": [
+        "chatbot",
+        "productivity"
+      ],
+      "useCases": [
+        "chat",
+        "productivity",
+        "web assistance"
+      ],
+      "officialUrl": "https://copilot.microsoft.com",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "web"
+      ],
+      "shortDescription": "Microsoft AI assistant for chat and productivity tasks."
+    },
+    {
+      "id": "perplexity",
+      "name": "Perplexity",
+      "categories": [
+        "search",
+        "answer-engine"
+      ],
+      "useCases": [
+        "research",
+        "search with sources",
+        "question answering"
+      ],
+      "officialUrl": "https://perplexity.ai",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "web"
+      ],
+      "shortDescription": "AI answer engine and research tool with cited responses."
+    },
+    {
+      "id": "grok",
+      "name": "Grok",
+      "categories": [
+        "chatbot",
+        "search"
+      ],
+      "useCases": [
+        "chat",
+        "search",
+        "general assistance"
+      ],
+      "officialUrl": "https://grok.com",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "web"
+      ],
+      "shortDescription": "xAI assistant with web access and developer model docs."
+    },
+    {
+      "id": "meta-ai",
+      "name": "Meta AI",
+      "categories": [
+        "chatbot",
+        "image-generation"
+      ],
+      "useCases": [
+        "chat",
+        "image creation"
+      ],
+      "officialUrl": "https://meta.ai",
+      "pricing": "free_or_unknown",
+      "availability": "active",
+      "platforms": [
+        "web"
+      ],
+      "shortDescription": "Meta assistant that can chat and generate images."
+    },
+    {
+      "id": "le-chat",
+      "name": "Le Chat",
+      "categories": [
+        "chatbot"
+      ],
+      "useCases": [
+        "chat",
+        "general assistance"
+      ],
+      "officialUrl": "https://chat.mistral.ai",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "shortDescription": "Mistral chat assistant with free and paid plans."
+    },
+    {
+      "id": "brave-leo",
+      "name": "Brave Leo",
+      "categories": [
+        "browser-assistant",
+        "chatbot"
+      ],
+      "useCases": [
+        "browser assistance",
+        "summarization",
+        "chat"
+      ],
+      "officialUrl": "https://brave.com/leo",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "browser"
+      ],
+      "shortDescription": "AI assistant built into the Brave browser."
+    },
+    {
+      "id": "poe",
+      "name": "Poe",
+      "categories": [
+        "model-aggregator",
+        "chatbot"
+      ],
+      "useCases": [
+        "chat",
+        "multi-model access"
+      ],
+      "officialUrl": "https://poe.com",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "web"
+      ],
+      "shortDescription": "Platform that aggregates many AI models in one interface."
+    },
+    {
+      "id": "notion",
+      "name": "Notion",
+      "categories": [
+        "productivity",
+        "automation",
+        "agents"
+      ],
+      "useCases": [
+        "workspace",
+        "notes",
+        "custom agents",
+        "team productivity"
+      ],
+      "officialUrl": "https://www.notion.com/pricing",
+      "pricing": "free+paid",
+      "availability": "beta_or_active",
+      "platforms": [
+        "web"
+      ],
+      "shortDescription": "Workspace platform with AI features and custom agents."
+    },
+    {
+      "id": "grammarly",
+      "name": "Grammarly",
+      "categories": [
+        "writing",
+        "proofreading",
+        "text-generation"
+      ],
+      "useCases": [
+        "grammar correction",
+        "writing improvement",
+        "editing"
+      ],
+      "officialUrl": "https://www.grammarly.com/plans",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "web",
+        "extensions"
+      ],
+      "shortDescription": "Writing assistant for proofreading and language improvement."
+    },
+    {
+      "id": "jasper",
+      "name": "Jasper",
+      "categories": [
+        "writing",
+        "marketing"
+      ],
+      "useCases": [
+        "marketing copy",
+        "content creation",
+        "brand writing"
+      ],
+      "officialUrl": "https://www.jasper.ai/pricing",
+      "pricing": "paid_with_trial",
+      "availability": "active",
+      "platforms": [
+        "web"
+      ],
+      "shortDescription": "Marketing-focused AI writing platform."
+    },
+    {
+      "id": "copy-ai",
+      "name": "Copy.ai",
+      "categories": [
+        "marketing",
+        "sales",
+        "automation"
+      ],
+      "useCases": [
+        "go-to-market workflows",
+        "sales content",
+        "marketing automation"
+      ],
+      "officialUrl": "https://www.copy.ai/prices",
+      "pricing": "paid_or_unknown",
+      "availability": "active",
+      "platforms": [
+        "web"
+      ],
+      "shortDescription": "GTM AI platform for sales and marketing workflows."
+    },
+    {
+      "id": "deepl",
+      "name": "DeepL",
+      "categories": [
+        "translation",
+        "language"
+      ],
+      "useCases": [
+        "translation",
+        "language assistance"
+      ],
+      "officialUrl": "https://www.deepl.com/en",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "web",
+        "api"
+      ],
+      "shortDescription": "Translation platform with API and agent features."
+    },
+    {
+      "id": "quillbot",
+      "name": "QuillBot",
+      "categories": [
+        "writing",
+        "paraphrasing"
+      ],
+      "useCases": [
+        "paraphrasing",
+        "summarization",
+        "writing support"
+      ],
+      "officialUrl": "https://quillbot.com/upgrade",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "web"
+      ],
+      "shortDescription": "Writing suite for paraphrasing and summarization."
+    },
+    {
+      "id": "wordtune",
+      "name": "Wordtune",
+      "categories": [
+        "writing",
+        "text-improvement"
+      ],
+      "useCases": [
+        "rewriting",
+        "summarizing",
+        "editing"
+      ],
+      "officialUrl": "https://www.wordtune.com/plans",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "web",
+        "extensions"
+      ],
+      "shortDescription": "Writing assistant for improving and rewriting text."
+    },
+    {
+      "id": "writesonic",
+      "name": "Writesonic",
+      "categories": [
+        "writing",
+        "seo",
+        "marketing"
+      ],
+      "useCases": [
+        "seo content",
+        "content writing",
+        "marketing copy"
+      ],
+      "officialUrl": "https://writesonic.com/pricing",
+      "pricing": "paid_or_unknown",
+      "availability": "active",
+      "platforms": [
+        "web"
+      ],
+      "shortDescription": "Content and SEO platform focused on AI-assisted writing."
+    },
+    {
+      "id": "midjourney",
+      "name": "Midjourney",
+      "categories": [
+        "image-generation"
+      ],
+      "useCases": [
+        "ai art",
+        "image creation"
+      ],
+      "officialUrl": "https://www.midjourney.com",
+      "pricing": "paid",
+      "availability": "active",
+      "platforms": [
+        "web",
+        "discord"
+      ],
+      "shortDescription": "Popular AI image generator."
+    },
+    {
+      "id": "adobe-firefly",
+      "name": "Adobe Firefly",
+      "categories": [
+        "image-generation",
+        "video-generation",
+        "audio",
+        "design"
+      ],
+      "useCases": [
+        "image creation",
+        "video generation",
+        "audio generation",
+        "creative editing"
+      ],
+      "officialUrl": "https://www.adobe.com/products/firefly.html",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "web",
+        "desktop",
+        "mobile"
+      ],
+      "shortDescription": "Adobe generative suite for image, video, and audio workflows."
+    },
+    {
+      "id": "stability-ai-stable-image",
+      "name": "Stability AI Stable Image",
+      "categories": [
+        "image-generation",
+        "models"
+      ],
+      "useCases": [
+        "image generation",
+        "commercial or licensed generative imaging"
+      ],
+      "officialUrl": "https://stability.ai/stable-image",
+      "pricing": "unknown",
+      "availability": "active",
+      "platforms": [
+        "web"
+      ],
+      "shortDescription": "Stable Image / Stable Diffusion image generation offering."
+    },
+    {
+      "id": "ideogram",
+      "name": "Ideogram",
+      "categories": [
+        "image-generation"
+      ],
+      "useCases": [
+        "text-to-image"
+      ],
+      "officialUrl": "https://ideogram.ai",
+      "pricing": "unknown",
+      "availability": "active",
+      "platforms": [
+        "web"
+      ],
+      "shortDescription": "Web-based text-to-image generator."
+    },
+    {
+      "id": "canva-magic-studio",
+      "name": "Canva Magic Studio",
+      "categories": [
+        "design",
+        "ai-tools"
+      ],
+      "useCases": [
+        "design assistance",
+        "creative editing",
+        "content creation"
+      ],
+      "officialUrl": "https://www.canva.com/magic",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "web",
+        "apps"
+      ],
+      "shortDescription": "AI toolkit inside Canva for design and content workflows."
+    },
+    {
+      "id": "leonardo-ai",
+      "name": "Leonardo AI",
+      "categories": [
+        "image-generation",
+        "creative-video"
+      ],
+      "useCases": [
+        "creative assets",
+        "image generation",
+        "video creativity"
+      ],
+      "officialUrl": "https://leonardo.ai/pricing",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "web",
+        "api"
+      ],
+      "shortDescription": "Creative asset generation platform with API access."
+    },
+    {
+      "id": "krea",
+      "name": "Krea",
+      "categories": [
+        "design",
+        "image-generation",
+        "video-generation",
+        "3d"
+      ],
+      "useCases": [
+        "creative generation",
+        "image editing",
+        "video generation",
+        "3D creativity"
+      ],
+      "officialUrl": "https://www.krea.ai/pricing",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "web"
+      ],
+      "shortDescription": "Creative tools for images, video, and 3D assets."
+    },
+    {
+      "id": "recraft",
+      "name": "Recraft",
+      "categories": [
+        "image-generation",
+        "vector-design"
+      ],
+      "useCases": [
+        "image generation",
+        "svg/vector generation"
+      ],
+      "officialUrl": "https://www.recraft.ai/pricing",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "web"
+      ],
+      "shortDescription": "Platform for generating raster and vector graphics."
+    },
+    {
+      "id": "black-forest-labs-flux",
+      "name": "Black Forest Labs FLUX",
+      "categories": [
+        "image-generation",
+        "models"
+      ],
+      "useCases": [
+        "image generation",
+        "model experimentation"
+      ],
+      "officialUrl": "https://bfl.ai",
+      "pricing": "free+paid_or_unknown",
+      "availability": "active",
+      "platforms": [
+        "web"
+      ],
+      "shortDescription": "FLUX image generation models from Black Forest Labs."
+    },
+    {
+      "id": "sora",
+      "name": "Sora",
+      "categories": [
+        "video-generation"
+      ],
+      "useCases": [
+        "text-to-video"
+      ],
+      "officialUrl": "https://openai.com/sora",
+      "pricing": "unknown",
+      "availability": "beta_or_limited_rollout",
+      "platforms": [
+        "web",
+        "ios"
+      ],
+      "shortDescription": "OpenAI video generation model with staged rollout."
+    },
+    {
+      "id": "veo-3",
+      "name": "Veo 3",
+      "categories": [
+        "video-generation"
+      ],
+      "useCases": [
+        "video generation"
+      ],
+      "officialUrl": "https://aistudio.google.com/models/veo-3",
+      "pricing": "unknown",
+      "availability": "active",
+      "platforms": [
+        "web"
+      ],
+      "shortDescription": "Google DeepMind video generation model accessible in AI Studio."
+    },
+    {
+      "id": "runway",
+      "name": "Runway",
+      "categories": [
+        "video-generation",
+        "image-generation",
+        "audio"
+      ],
+      "useCases": [
+        "video generation",
+        "creative production",
+        "media workflows"
+      ],
+      "officialUrl": "https://runwayml.com/pricing",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "web",
+        "api"
+      ],
+      "shortDescription": "End-to-end generative media platform for video and more."
+    },
+    {
+      "id": "pika",
+      "name": "Pika",
+      "categories": [
+        "video-generation"
+      ],
+      "useCases": [
+        "video generation"
+      ],
+      "officialUrl": "https://pika.art/pricing",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "web"
+      ],
+      "shortDescription": "AI video generation platform."
+    },
+    {
+      "id": "luma-dream-machine",
+      "name": "Luma Dream Machine",
+      "categories": [
+        "video-generation"
+      ],
+      "useCases": [
+        "video generation"
+      ],
+      "officialUrl": "https://lumalabs.ai/pricing",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "web",
+        "ios"
+      ],
+      "shortDescription": "Video generation tool from Luma with multiple plans."
+    },
+    {
+      "id": "synthesia",
+      "name": "Synthesia",
+      "categories": [
+        "avatar-video",
+        "business-video"
+      ],
+      "useCases": [
+        "avatar videos",
+        "training videos",
+        "business explainers"
+      ],
+      "officialUrl": "https://www.synthesia.io/pricing",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "desktop"
+      ],
+      "shortDescription": "Business-focused AI avatar video platform."
+    },
+    {
+      "id": "heygen",
+      "name": "HeyGen",
+      "categories": [
+        "avatar-video",
+        "api"
+      ],
+      "useCases": [
+        "avatar videos",
+        "video creation",
+        "api workflows"
+      ],
+      "officialUrl": "https://www.heygen.com/pricing",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "web"
+      ],
+      "shortDescription": "AI avatar video platform with API pricing."
+    },
+    {
+      "id": "d-id",
+      "name": "D-ID",
+      "categories": [
+        "avatar-video",
+        "visual-agents"
+      ],
+      "useCases": [
+        "talking avatars",
+        "visual agents",
+        "video generation"
+      ],
+      "officialUrl": "https://www.d-id.com/pricing/studio",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "web",
+        "mobile"
+      ],
+      "shortDescription": "Talking avatar and visual agent platform."
+    },
+    {
+      "id": "elevenlabs",
+      "name": "ElevenLabs",
+      "categories": [
+        "text-to-speech",
+        "voice-agents",
+        "audio"
+      ],
+      "useCases": [
+        "realistic voice generation",
+        "voice agents",
+        "speech synthesis"
+      ],
+      "officialUrl": "https://elevenlabs.io/pricing",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "web",
+        "api"
+      ],
+      "shortDescription": "Voice platform for realistic TTS and voice agents."
+    },
+    {
+      "id": "deepgram",
+      "name": "Deepgram",
+      "categories": [
+        "speech-to-text",
+        "text-to-speech",
+        "voice-agents",
+        "api"
+      ],
+      "useCases": [
+        "speech recognition",
+        "speech synthesis",
+        "voice agents"
+      ],
+      "officialUrl": "https://deepgram.com/pricing",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "api"
+      ],
+      "shortDescription": "Voice AI platform with STT, TTS, and voice agents."
+    },
+    {
+      "id": "assemblyai",
+      "name": "AssemblyAI",
+      "categories": [
+        "speech-to-text",
+        "audio-understanding",
+        "api"
+      ],
+      "useCases": [
+        "transcription",
+        "audio intelligence",
+        "speech analysis"
+      ],
+      "officialUrl": "https://www.assemblyai.com/pricing",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "api"
+      ],
+      "shortDescription": "Voice AI API for transcription and speech understanding."
+    },
+    {
+      "id": "suno",
+      "name": "Suno",
+      "categories": [
+        "music-generation"
+      ],
+      "useCases": [
+        "music generation",
+        "song creation"
+      ],
+      "officialUrl": "https://suno.com/pricing",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "web"
+      ],
+      "shortDescription": "AI music generation platform."
+    },
+    {
+      "id": "udio",
+      "name": "Udio",
+      "categories": [
+        "music-generation"
+      ],
+      "useCases": [
+        "music generation",
+        "song creation"
+      ],
+      "officialUrl": "https://www.udio.com/pricing",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "web"
+      ],
+      "shortDescription": "Music generation tool with official pricing plans."
+    },
+    {
+      "id": "murf",
+      "name": "Murf",
+      "categories": [
+        "text-to-speech",
+        "voice-agents",
+        "audio"
+      ],
+      "useCases": [
+        "voice generation",
+        "tts api",
+        "voice workflows"
+      ],
+      "officialUrl": "https://murf.ai/pricing",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "web",
+        "api"
+      ],
+      "shortDescription": "TTS and voice agent platform with API access."
+    },
+    {
+      "id": "resemble-ai",
+      "name": "Resemble AI",
+      "categories": [
+        "voice-cloning",
+        "deepfake-detection",
+        "audio"
+      ],
+      "useCases": [
+        "voice cloning",
+        "deepfake detection",
+        "voice api"
+      ],
+      "officialUrl": "https://www.resemble.ai/pricing",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "web",
+        "api"
+      ],
+      "shortDescription": "Voice cloning platform that also offers deepfake detection."
+    },
+    {
+      "id": "github-copilot",
+      "name": "GitHub Copilot",
+      "categories": [
+        "coding-assistant"
+      ],
+      "useCases": [
+        "code completion",
+        "pair programming",
+        "IDE assistance"
+      ],
+      "officialUrl": "https://github.com/features/copilot/plans",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "ides"
+      ],
+      "shortDescription": "AI coding assistant integrated into developer editors."
+    },
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "categories": [
+        "ide",
+        "coding-assistant",
+        "agentic-ide"
+      ],
+      "useCases": [
+        "coding assistance",
+        "agent workflows",
+        "editor-based development"
+      ],
+      "officialUrl": "https://cursor.com/pricing",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "macos"
+      ],
+      "shortDescription": "AI-native IDE/editor with agents and MCP support."
+    },
+    {
+      "id": "windsurf",
+      "name": "Windsurf",
+      "categories": [
+        "ide",
+        "agentic-ide",
+        "coding-assistant"
+      ],
+      "useCases": [
+        "coding assistance",
+        "agentic development"
+      ],
+      "officialUrl": "https://windsurf.com/editor",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "mac",
+        "windows",
+        "linux"
+      ],
+      "shortDescription": "Agentic IDE available across desktop platforms."
+    },
+    {
+      "id": "replit-agent",
+      "name": "Replit Agent",
+      "categories": [
+        "app-builder",
+        "coding-assistant"
+      ],
+      "useCases": [
+        "build apps from chat",
+        "website creation",
+        "rapid prototyping"
+      ],
+      "officialUrl": "https://replit.com/ai",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "web"
+      ],
+      "shortDescription": "Chat-based app and site builder inside Replit."
+    },
+    {
+      "id": "amazon-q-developer",
+      "name": "Amazon Q Developer",
+      "categories": [
+        "coding-assistant"
+      ],
+      "useCases": [
+        "software development",
+        "aws development help"
+      ],
+      "officialUrl": "https://aws.amazon.com/q/developer/",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "unknown"
+      ],
+      "shortDescription": "AWS developer assistant for coding and cloud workflows."
+    },
+    {
+      "id": "jetbrains-ai-assistant",
+      "name": "JetBrains AI Assistant",
+      "categories": [
+        "ide",
+        "coding-assistant"
+      ],
+      "useCases": [
+        "coding assistance",
+        "IDE productivity"
+      ],
+      "officialUrl": "https://www.jetbrains.com/ai-ides/buy/",
+      "pricing": "paid_with_trial",
+      "availability": "active",
+      "platforms": [
+        "ides",
+        "windows",
+        "macos",
+        "linux"
+      ],
+      "shortDescription": "AI assistant integrated into JetBrains IDEs."
+    },
+    {
+      "id": "gemini-code-assist",
+      "name": "Gemini Code Assist",
+      "categories": [
+        "coding-assistant"
+      ],
+      "useCases": [
+        "code completion",
+        "development assistance"
+      ],
+      "officialUrl": "https://codeassist.google",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "ide-extensions"
+      ],
+      "shortDescription": "Google coding assistant for IDEs and business use."
+    },
+    {
+      "id": "aider",
+      "name": "Aider",
+      "categories": [
+        "coding-assistant",
+        "cli",
+        "open-source"
+      ],
+      "useCases": [
+        "terminal coding",
+        "git-integrated pair programming"
+      ],
+      "officialUrl": "https://github.com/Aider-AI/aider",
+      "pricing": "free",
+      "availability": "active",
+      "platforms": [
+        "cli"
+      ],
+      "shortDescription": "Open-source AI pair programming tool for the terminal."
+    },
+    {
+      "id": "cline",
+      "name": "Cline",
+      "categories": [
+        "coding-agent",
+        "vscode-extension",
+        "open-source"
+      ],
+      "useCases": [
+        "agentic coding",
+        "file editing",
+        "VS Code workflows"
+      ],
+      "officialUrl": "https://github.com/cline/cline",
+      "pricing": "free",
+      "availability": "active",
+      "platforms": [
+        "vscode"
+      ],
+      "shortDescription": "Open-source coding agent inside VS Code."
+    },
+    {
+      "id": "devin",
+      "name": "Devin",
+      "categories": [
+        "coding-agent",
+        "software-engineer-agent"
+      ],
+      "useCases": [
+        "software engineering automation",
+        "agentic development"
+      ],
+      "officialUrl": "https://devin.ai",
+      "pricing": "unknown",
+      "availability": "waitlist_or_invite",
+      "platforms": [
+        "web"
+      ],
+      "shortDescription": "AI software engineer agent with early access/waitlist."
+    },
+    {
+      "id": "zapier",
+      "name": "Zapier",
+      "categories": [
+        "automation",
+        "integrations"
+      ],
+      "useCases": [
+        "workflow automation",
+        "ai automations",
+        "app integrations"
+      ],
+      "officialUrl": "https://zapier.com/pricing",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "web"
+      ],
+      "shortDescription": "Automation platform with broad app integrations and AI workflows."
+    },
+    {
+      "id": "make",
+      "name": "Make",
+      "categories": [
+        "automation",
+        "visual-workflows",
+        "agents"
+      ],
+      "useCases": [
+        "workflow building",
+        "visual automation",
+        "agent flows"
+      ],
+      "officialUrl": "https://www.make.com/en/pricing",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "web"
+      ],
+      "shortDescription": "Visual-first automation and flow builder."
+    },
+    {
+      "id": "n8n",
+      "name": "n8n",
+      "categories": [
+        "automation",
+        "agents",
+        "self-hosted"
+      ],
+      "useCases": [
+        "programmable automation",
+        "ai workflows",
+        "self-hosted flows"
+      ],
+      "officialUrl": "https://n8n.io/pricing",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "web",
+        "cloud",
+        "self-hosted"
+      ],
+      "shortDescription": "Programmable automation platform with AI support and self-hosting."
+    },
+    {
+      "id": "uipath",
+      "name": "UiPath",
+      "categories": [
+        "enterprise-automation",
+        "agentic-automation"
+      ],
+      "useCases": [
+        "business automation",
+        "robotic process automation",
+        "enterprise agents"
+      ],
+      "officialUrl": "https://www.uipath.com/pricing",
+      "pricing": "paid",
+      "availability": "active",
+      "platforms": [
+        "web",
+        "cloud",
+        "apps"
+      ],
+      "shortDescription": "Enterprise automation platform with agentic automation features."
+    },
+    {
+      "id": "openai-agents",
+      "name": "OpenAI Agents",
+      "categories": [
+        "agent-framework",
+        "sdk"
+      ],
+      "useCases": [
+        "build agents",
+        "deploy agents",
+        "agent orchestration"
+      ],
+      "officialUrl": "https://developers.openai.com/api/docs/guides/agents/",
+      "pricing": "usage_based_or_unknown",
+      "availability": "active",
+      "platforms": [
+        "api",
+        "sdk"
+      ],
+      "shortDescription": "Official guides and SDK for building and deploying agents."
+    },
+    {
+      "id": "openai-agent-builder",
+      "name": "OpenAI Agent Builder",
+      "categories": [
+        "agent-builder",
+        "visual-workflows"
+      ],
+      "useCases": [
+        "visual multi-step workflows",
+        "agent prototyping"
+      ],
+      "officialUrl": "https://developers.openai.com/api/docs/guides/agent-builder/",
+      "pricing": "unknown",
+      "availability": "active",
+      "platforms": [
+        "web"
+      ],
+      "shortDescription": "Visual canvas for creating multi-step agent flows in Playground."
+    },
+    {
+      "id": "autogen",
+      "name": "AutoGen",
+      "categories": [
+        "multi-agent-framework",
+        "open-source"
+      ],
+      "useCases": [
+        "multi-agent apps",
+        "agent orchestration"
+      ],
+      "officialUrl": "https://github.com/microsoft/autogen",
+      "pricing": "free",
+      "availability": "active",
+      "platforms": [
+        "python"
+      ],
+      "shortDescription": "Microsoft framework for multi-agent applications."
+    },
+    {
+      "id": "microsoft-agent-framework",
+      "name": "Microsoft Agent Framework",
+      "categories": [
+        "agent-framework",
+        "open-source"
+      ],
+      "useCases": [
+        "build agents",
+        "coordinate agents",
+        "deploy agents"
+      ],
+      "officialUrl": "https://github.com/microsoft/agent-framework",
+      "pricing": "free",
+      "availability": "active",
+      "platforms": [
+        "python",
+        ".net"
+      ],
+      "shortDescription": "Framework for building and coordinating agents with Python/.NET."
+    },
+    {
+      "id": "crewai",
+      "name": "CrewAI",
+      "categories": [
+        "multi-agent-framework",
+        "open-source"
+      ],
+      "useCases": [
+        "role-playing agents",
+        "autonomous workflows"
+      ],
+      "officialUrl": "https://docs.crewai.com",
+      "pricing": "free",
+      "availability": "active",
+      "platforms": [
+        "python"
+      ],
+      "shortDescription": "Python framework for orchestrating multiple role-based agents."
+    },
+    {
+      "id": "dify",
+      "name": "Dify",
+      "categories": [
+        "llmops",
+        "app-builder",
+        "agents"
+      ],
+      "useCases": [
+        "build ai apps",
+        "llmops",
+        "agentic apps"
+      ],
+      "officialUrl": "https://dify.ai/pricing",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "web"
+      ],
+      "shortDescription": "Agentic app and LLMOps platform with open-source roots."
+    },
+    {
+      "id": "openai-api",
+      "name": "OpenAI API",
+      "categories": [
+        "model-hosting",
+        "api"
+      ],
+      "useCases": [
+        "llm access",
+        "embeddings",
+        "images"
+      ],
+      "officialUrl": "https://openai.com/api/pricing",
+      "pricing": "usage_based",
+      "availability": "active",
+      "platforms": [
+        "api"
+      ],
+      "shortDescription": "API access to OpenAI models, embeddings, and image features."
+    },
+    {
+      "id": "anthropic-api",
+      "name": "Anthropic API",
+      "categories": [
+        "model-hosting",
+        "api"
+      ],
+      "useCases": [
+        "claude api access",
+        "llm integration"
+      ],
+      "officialUrl": "https://platform.claude.com/docs/en/about-claude/pricing",
+      "pricing": "usage_based",
+      "availability": "active",
+      "platforms": [
+        "api"
+      ],
+      "shortDescription": "API pricing and access for Claude models."
+    },
+    {
+      "id": "cohere",
+      "name": "Cohere",
+      "categories": [
+        "models",
+        "embeddings",
+        "rerank",
+        "api"
+      ],
+      "useCases": [
+        "embeddings",
+        "reranking",
+        "language models"
+      ],
+      "officialUrl": "https://cohere.com/pricing",
+      "pricing": "usage_based_or_paid",
+      "availability": "active",
+      "platforms": [
+        "api"
+      ],
+      "shortDescription": "Platform for embeddings, rerank, and model APIs."
+    },
+    {
+      "id": "mistral-ai-pricing",
+      "name": "Mistral AI Pricing / Studio",
+      "categories": [
+        "model-hosting",
+        "studio",
+        "api",
+        "chat"
+      ],
+      "useCases": [
+        "mistral api",
+        "studio access",
+        "chat access"
+      ],
+      "officialUrl": "https://mistral.ai/pricing",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "web",
+        "services"
+      ],
+      "shortDescription": "Pricing page for Mistral Studio, API, and Le Chat."
+    },
+    {
+      "id": "xai-developers",
+      "name": "xAI Developers",
+      "categories": [
+        "models",
+        "api"
+      ],
+      "useCases": [
+        "grok models api",
+        "structured outputs",
+        "function calling"
+      ],
+      "officialUrl": "https://docs.x.ai/developers/models",
+      "pricing": "usage_based_or_paid",
+      "availability": "active",
+      "platforms": [
+        "api"
+      ],
+      "shortDescription": "Developer docs and pricing for xAI models."
+    },
+    {
+      "id": "hugging-face",
+      "name": "Hugging Face",
+      "categories": [
+        "model-hosting",
+        "inference-endpoints",
+        "api"
+      ],
+      "useCases": [
+        "host models",
+        "inference endpoints",
+        "ml deployment"
+      ],
+      "officialUrl": "https://huggingface.co/pricing",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "web",
+        "api",
+        "endpoints"
+      ],
+      "shortDescription": "Model hosting and inference endpoint platform."
+    },
+    {
+      "id": "replicate",
+      "name": "Replicate",
+      "categories": [
+        "model-hosting",
+        "api"
+      ],
+      "useCases": [
+        "run models by api",
+        "community models",
+        "private models"
+      ],
+      "officialUrl": "https://replicate.com/pricing",
+      "pricing": "paid_with_free_trials",
+      "availability": "active",
+      "platforms": [
+        "api"
+      ],
+      "shortDescription": "Run many models via API with usage-based pricing."
+    },
+    {
+      "id": "together-ai",
+      "name": "Together AI",
+      "categories": [
+        "inference",
+        "fine-tuning",
+        "gpus",
+        "api"
+      ],
+      "useCases": [
+        "model inference",
+        "fine-tuning",
+        "gpu access"
+      ],
+      "officialUrl": "https://www.together.ai/pricing",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "api"
+      ],
+      "shortDescription": "Inference and fine-tuning platform with OpenAI-compatible API."
+    },
+    {
+      "id": "groqcloud",
+      "name": "GroqCloud",
+      "categories": [
+        "fast-inference",
+        "api"
+      ],
+      "useCases": [
+        "fast model inference"
+      ],
+      "officialUrl": "https://groq.com/groqcloud",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "api"
+      ],
+      "shortDescription": "Groq inference platform with free and developer plans."
+    },
+    {
+      "id": "amazon-bedrock",
+      "name": "Amazon Bedrock",
+      "categories": [
+        "model-hosting",
+        "aws",
+        "api"
+      ],
+      "useCases": [
+        "foundation model access",
+        "evaluation",
+        "aws genai"
+      ],
+      "officialUrl": "https://aws.amazon.com/bedrock/pricing/",
+      "pricing": "usage_based",
+      "availability": "active",
+      "platforms": [
+        "api"
+      ],
+      "shortDescription": "AWS model platform with multiple providers and evaluation tools."
+    },
+    {
+      "id": "azure-openai-service",
+      "name": "Azure OpenAI Service",
+      "categories": [
+        "model-hosting",
+        "azure",
+        "api"
+      ],
+      "useCases": [
+        "openai models on azure",
+        "enterprise ai"
+      ],
+      "officialUrl": "https://azure.microsoft.com/pricing/details/azure-openai/",
+      "pricing": "usage_based",
+      "availability": "active",
+      "platforms": [
+        "api"
+      ],
+      "shortDescription": "Azure-hosted access to OpenAI models."
+    },
+    {
+      "id": "vertex-ai-generative-ai",
+      "name": "Vertex AI Generative AI",
+      "categories": [
+        "model-hosting",
+        "gcp",
+        "api"
+      ],
+      "useCases": [
+        "generative ai on gcp",
+        "partner models"
+      ],
+      "officialUrl": "https://cloud.google.com/vertex-ai/generative-ai/pricing",
+      "pricing": "usage_based",
+      "availability": "active",
+      "platforms": [
+        "api"
+      ],
+      "shortDescription": "Google Cloud generative AI platform."
+    },
+    {
+      "id": "ibm-watsonx-ai",
+      "name": "IBM watsonx.ai",
+      "categories": [
+        "model-hosting",
+        "embeddings",
+        "api"
+      ],
+      "useCases": [
+        "model serving",
+        "embeddings",
+        "enterprise ai"
+      ],
+      "officialUrl": "https://www.ibm.com/products/watsonx-ai/pricing",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "web",
+        "api"
+      ],
+      "shortDescription": "IBM enterprise AI platform with models and embeddings."
+    },
+    {
+      "id": "pinecone",
+      "name": "Pinecone",
+      "categories": [
+        "vector-db",
+        "rag",
+        "api"
+      ],
+      "useCases": [
+        "vector search",
+        "rag backends"
+      ],
+      "officialUrl": "https://www.pinecone.io/pricing",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "api"
+      ],
+      "shortDescription": "Vector database with usage-based pricing."
+    },
+    {
+      "id": "weaviate",
+      "name": "Weaviate",
+      "categories": [
+        "vector-db",
+        "rag",
+        "api"
+      ],
+      "useCases": [
+        "vector search",
+        "rag",
+        "query agents"
+      ],
+      "officialUrl": "https://weaviate.io/pricing",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "api"
+      ],
+      "shortDescription": "Vector database and cloud platform for RAG."
+    },
+    {
+      "id": "qdrant",
+      "name": "Qdrant",
+      "categories": [
+        "vector-db",
+        "rag",
+        "api"
+      ],
+      "useCases": [
+        "vector search",
+        "rag"
+      ],
+      "officialUrl": "https://qdrant.tech/pricing",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "api"
+      ],
+      "shortDescription": "Vector database with cloud pricing and free tier."
+    },
+    {
+      "id": "zilliz-cloud",
+      "name": "Zilliz Cloud",
+      "categories": [
+        "vector-db",
+        "managed-milvus",
+        "api"
+      ],
+      "useCases": [
+        "managed vector database",
+        "rag"
+      ],
+      "officialUrl": "https://zilliz.com/pricing",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "api"
+      ],
+      "shortDescription": "Managed Milvus-based vector database service."
+    },
+    {
+      "id": "milvus",
+      "name": "Milvus",
+      "categories": [
+        "vector-db",
+        "open-source"
+      ],
+      "useCases": [
+        "vector search",
+        "rag",
+        "self-hosted vector database"
+      ],
+      "officialUrl": "https://milvus.io",
+      "pricing": "free_or_paid_managed",
+      "availability": "active",
+      "platforms": [
+        "unknown"
+      ],
+      "shortDescription": "Open-source vector database with managed option."
+    },
+    {
+      "id": "chroma",
+      "name": "Chroma",
+      "categories": [
+        "vector-db",
+        "rag",
+        "open-source"
+      ],
+      "useCases": [
+        "retrieval",
+        "search",
+        "rag"
+      ],
+      "officialUrl": "https://trychroma.com",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "web",
+        "client-libraries"
+      ],
+      "shortDescription": "Open-source retrieval/vector database with cloud option."
+    },
+    {
+      "id": "pgvector",
+      "name": "pgvector",
+      "categories": [
+        "vector-extension",
+        "rag",
+        "open-source"
+      ],
+      "useCases": [
+        "vector search in postgres",
+        "rag"
+      ],
+      "officialUrl": "https://github.com/pgvector/pgvector",
+      "pricing": "free",
+      "availability": "active",
+      "platforms": [
+        "postgres"
+      ],
+      "shortDescription": "Open-source Postgres extension for vector search."
+    },
+    {
+      "id": "opensearch-vector-engine",
+      "name": "OpenSearch Vector Engine",
+      "categories": [
+        "vector-search-engine",
+        "open-source"
+      ],
+      "useCases": [
+        "scalable vector search",
+        "ai search apps"
+      ],
+      "officialUrl": "https://opensearch.org/platform/vector-engine/",
+      "pricing": "free",
+      "availability": "active",
+      "platforms": [
+        "web",
+        "servers"
+      ],
+      "shortDescription": "Vector search engine for scalable AI applications."
+    },
+    {
+      "id": "llamaindex-llamaparse",
+      "name": "LlamaIndex / LlamaParse",
+      "categories": [
+        "documents",
+        "rag",
+        "ocr"
+      ],
+      "useCases": [
+        "document parsing",
+        "rag ingestion",
+        "agents"
+      ],
+      "officialUrl": "https://llamaindex.ai",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "web",
+        "sdks"
+      ],
+      "shortDescription": "Document and RAG tooling with parsing and agent support."
+    },
+    {
+      "id": "unstructured",
+      "name": "Unstructured",
+      "categories": [
+        "data-preparation",
+        "documents",
+        "genai"
+      ],
+      "useCases": [
+        "prepare unstructured data",
+        "rag pipelines",
+        "document processing"
+      ],
+      "officialUrl": "https://unstructured.io/pricing",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "web",
+        "api"
+      ],
+      "shortDescription": "Transforms unstructured data into GenAI-ready inputs."
+    },
+    {
+      "id": "chatpdf",
+      "name": "ChatPDF",
+      "categories": [
+        "pdf-chat",
+        "documents"
+      ],
+      "useCases": [
+        "chat with pdf",
+        "document understanding"
+      ],
+      "officialUrl": "https://www.chatpdf.com",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "web"
+      ],
+      "shortDescription": "Chat with PDF files using AI."
+    },
+    {
+      "id": "humata",
+      "name": "Humata",
+      "categories": [
+        "document-chat",
+        "document-extraction"
+      ],
+      "useCases": [
+        "chat with documents",
+        "extract info from files"
+      ],
+      "officialUrl": "https://www.humata.ai/pricing",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "web"
+      ],
+      "shortDescription": "Document understanding and chat platform."
+    },
+    {
+      "id": "otter",
+      "name": "Otter",
+      "categories": [
+        "meeting-notes",
+        "summarization"
+      ],
+      "useCases": [
+        "transcription",
+        "meeting notes",
+        "summaries"
+      ],
+      "officialUrl": "https://otter.ai/pricing",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "web",
+        "ios",
+        "android"
+      ],
+      "shortDescription": "AI note taker with integrations for meetings."
+    },
+    {
+      "id": "fireflies-ai",
+      "name": "Fireflies.ai",
+      "categories": [
+        "meeting-notes",
+        "conversation-intelligence",
+        "api"
+      ],
+      "useCases": [
+        "meeting transcription",
+        "conversation intelligence",
+        "meeting summaries"
+      ],
+      "officialUrl": "https://fireflies.ai/pricing",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "web",
+        "apps"
+      ],
+      "shortDescription": "AI note taker and meeting intelligence platform."
+    },
+    {
+      "id": "zoom-ai-companion",
+      "name": "Zoom AI Companion",
+      "categories": [
+        "meetings",
+        "productivity"
+      ],
+      "useCases": [
+        "meeting assistance",
+        "productivity inside zoom"
+      ],
+      "officialUrl": "https://zoom.com/products/ai-assistant/",
+      "pricing": "included_with_eligible_paid_plans",
+      "availability": "active",
+      "platforms": [
+        "zoom-workplace"
+      ],
+      "shortDescription": "AI assistant included with eligible paid Zoom services."
+    },
+    {
+      "id": "elicit",
+      "name": "Elicit",
+      "categories": [
+        "research",
+        "literature-review"
+      ],
+      "useCases": [
+        "scientific research",
+        "paper discovery",
+        "evidence synthesis"
+      ],
+      "officialUrl": "https://elicit.com/pricing",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "web"
+      ],
+      "shortDescription": "Research assistant for scientific literature and reviews."
+    },
+    {
+      "id": "snowflake-cortex-search",
+      "name": "Snowflake Cortex Search",
+      "categories": [
+        "data",
+        "search",
+        "rag",
+        "ai-sql"
+      ],
+      "useCases": [
+        "cortex search",
+        "document ai billing",
+        "ai sql"
+      ],
+      "officialUrl": "https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-search/cortex-search-costs",
+      "pricing": "paid",
+      "availability": "active",
+      "platforms": [
+        "saas"
+      ],
+      "shortDescription": "Snowflake search and AI SQL costed service for RAG/search."
+    },
+    {
+      "id": "databricks-foundation-model-serving",
+      "name": "Databricks Foundation Model Serving",
+      "categories": [
+        "model-serving",
+        "llm",
+        "data-platform"
+      ],
+      "useCases": [
+        "serve foundation models",
+        "token-based llm serving"
+      ],
+      "officialUrl": "https://www.databricks.com/product/pricing/foundation-model-serving",
+      "pricing": "paid",
+      "availability": "active",
+      "platforms": [
+        "saas"
+      ],
+      "shortDescription": "Databricks Mosaic AI foundation model serving."
+    },
+    {
+      "id": "power-bi",
+      "name": "Power BI",
+      "categories": [
+        "data-analytics",
+        "bi"
+      ],
+      "useCases": [
+        "dashboards",
+        "business intelligence",
+        "reporting"
+      ],
+      "officialUrl": "https://www.microsoft.com/power-platform/products/power-bi/pricing",
+      "pricing": "free+paid",
+      "availability": "active",
+      "platforms": [
+        "web",
+        "desktop"
+      ],
+      "shortDescription": "Business intelligence and analytics platform with AI-related features."
+    },
+    {
+      "id": "fin-by-intercom",
+      "name": "Fin by Intercom",
+      "categories": [
+        "customer-service",
+        "ai-agent"
+      ],
+      "useCases": [
+        "customer support automation",
+        "service outcomes"
+      ],
+      "officialUrl": "https://fin.ai/pricing",
+      "pricing": "paid",
+      "availability": "active",
+      "platforms": [
+        "web"
+      ],
+      "shortDescription": "Customer service AI agent priced per outcome after trial."
+    },
+    {
+      "id": "zendesk-ai",
+      "name": "Zendesk AI",
+      "categories": [
+        "customer-service",
+        "ai-agents"
+      ],
+      "useCases": [
+        "customer support",
+        "service ai"
+      ],
+      "officialUrl": "https://www.zendesk.com/pricing",
+      "pricing": "paid",
+      "availability": "active",
+      "platforms": [
+        "saas"
+      ],
+      "shortDescription": "Zendesk AI features and agents for customer service."
+    },
+    {
+      "id": "salesforce-agentforce-for-service",
+      "name": "Salesforce Agentforce for Service",
+      "categories": [
+        "customer-service",
+        "agents"
+      ],
+      "useCases": [
+        "service automation",
+        "customer support agents"
+      ],
+      "officialUrl": "https://www.salesforce.com/service/ai/pricing/",
+      "pricing": "paid",
+      "availability": "active",
+      "platforms": [
+        "saas"
+      ],
+      "shortDescription": "Salesforce service AI agent offering."
+    }
+  ]
+}
