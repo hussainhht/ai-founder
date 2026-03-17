@@ -1,0 +1,151 @@
+{
+  "id": "",
+  "name": "",
+  "slug": "",
+  "tagline": "",
+  "shortDescription": "",
+  "fullDescription": "",
+
+  "developer": {
+    "name": "",
+    "website": ""
+  },
+
+  "officialUrl": "",
+  "logoUrl": "",
+  "screenshots": [],
+  "videoDemoUrl": "",
+
+  "categories": [],
+  "subcategories": [],
+  "tags": [],
+  "searchMetadata": {
+    "searchKeywords": [],
+    "semanticKeywords": [],
+    "alternativeNames": []
+  },
+
+  "features": [],
+  "secondaryFeatures": [],
+  "supportedInputTypes": [],
+  "supportedOutputTypes": [],
+
+  "bestFor": [],
+  "userTypes": [],
+  "skillLevel": [],
+  "industries": [],
+
+  "useCases": [
+    {
+      "title": "",
+      "description": ""
+    }
+  ],
+
+  "howToUse": {
+    "difficultyLevel": "",
+    "setupTime": "",
+    "steps": [],
+    "tips": [],
+    "commonMistakes": [],
+    "promptingTips": []
+  },
+
+  "platforms": {
+    "web": false,
+    "ios": false,
+    "android": false,
+    "windows": false,
+    "mac": false,
+    "linux": false,
+    "browserExtension": false,
+    "api": false
+  },
+
+  "access": {
+    "requiresAccount": false,
+    "cloudBased": false,
+    "localInstallation": false,
+    "openSource": false
+  },
+
+  "pricing": {
+    "hasFreePlan": false,
+    "hasFreeTrial": false,
+    "startingPrice": 0,
+    "currency": "USD",
+    "pricingModel": "",
+    "freePlanDetails": "",
+    "plans": [
+      {
+        "name": "",
+        "price": 0,
+        "billingPeriod": "",
+        "features": []
+      }
+    ]
+  },
+
+  "languagesSupported": [],
+  "arabicSupport": "unknown",
+  "regionalAvailability": [],
+
+  "integrations": [],
+
+  "pros": [],
+  "cons": [],
+  "limitations": [],
+  "notRecommendedFor": [],
+
+  "comparison": {
+    "alternatives": [],
+    "comparedTo": [
+      {
+        "toolName": "",
+        "summary": ""
+      }
+    ]
+  },
+
+  "faq": [
+    {
+      "question": "",
+      "answer": ""
+    }
+  ],
+
+  "privacy": {
+    "privacyPolicyUrl": "",
+    "termsOfServiceUrl": "",
+    "storesUserData": "unknown",
+    "teamPlanAvailable": false,
+    "enterpriseAvailable": false,
+    "securityNotes": []
+  },
+
+  "ratings": {
+    "overall": 0,
+    "easeOfUse": 0,
+    "features": 0,
+    "pricingValue": 0,
+    "accuracy": 0
+  },
+
+  "stats": {
+    "popularityScore": 0,
+    "communityReputation": "",
+    "featured": false,
+    "verified": false
+  },
+
+  "media": {
+    "logoAlt": "",
+    "gallery": []
+  },
+
+  "status": "active",
+  "launchYear": null,
+  "lastUpdated": "",
+  "changeFrequency": "",
+  "notes": ""
+}

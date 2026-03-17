@@ -1,0 +1,167 @@
+# AI Founder TODO
+
+Simple, clear roadmap for building a frontend-only AI tools discovery site.
+
+## North Star
+
+Build a fast website where users can:
+
+- discover AI tools by goal
+- filter and compare tools quickly
+- trust the information
+- decide with confidence
+
+## Top Priorities
+
+1. Structured tool data
+2. Powerful search
+3. Smart filters
+4. Related tools
+5. Comparison experience
+
+## Current Focus (MVP)
+
+### 1) Data Foundation
+
+- [ ] Define `Tool` JSON schema
+- [ ] Create `tool-template.json`
+- [ ] Add 10 high-quality sample tools
+- [ ] Enforce required fields: `id`, `slug`, `name`, `categories`, `pricing`, `platforms`
+- [ ] Keep naming normalized (use one format only, e.g. `image-generation`)
+
+### 2) Core Pages
+
+- [ ] Homepage with global search and key sections
+- [ ] Tool details page (`/tools/[slug]`)
+- [ ] Category page (`/categories/[category]`)
+- [ ] Compare page (`/compare`)
+
+### 3) Search and Filtering
+
+- [ ] Search fields: `name`, `tagline`, `shortDescription`, `categories`, `tags`, `features`, `bestFor`, `useCases`
+- [ ] Add weighted ranking:
+  - [ ] `name` = highest
+  - [ ] `categories` = high
+  - [ ] `tags` = medium
+  - [ ] description text = lower
+- [ ] Initial filters: Free, Has API, Beginner Friendly, Supports Arabic, Web Only, For Developers, For Students
+- [ ] Create lightweight `search-index.json`
+
+### 4) Tool Card UX
+
+- [ ] Show logo, name, tagline, category
+- [ ] Add badges: free/paid, API, beginner-friendly, Arabic support
+- [ ] Add `Compare` action
+- [ ] Add local bookmarks (`localStorage`)
+- [ ] Track recently viewed tools
+
+## Phase Plan
+
+### Phase 1: MVP Build
+
+- [ ] Folder structure
+- [ ] Tool schema + template
+- [ ] 10 sample tools
+- [ ] Homepage
+- [ ] Tool page
+- [ ] Basic search
+- [ ] Basic filters
+
+### Phase 2: Product Depth
+
+- [ ] Related tools engine
+- [ ] Comparison feature
+- [ ] Collections pages
+- [ ] Featured tools system
+- [ ] Bookmarks + history polish
+
+### Phase 3: Intelligence Layer
+
+- [ ] Recommendation wizard
+- [ ] Better ranking model
+- [ ] Search suggestions/autocomplete
+- [ ] Advanced compare table
+- [ ] Search performance optimization
+
+### Phase 4: SEO + Content Scale
+
+- [ ] SEO page templates
+- [ ] Use-case hub pages
+- [ ] Prompt examples per tool
+- [ ] Tool update tracking
+- [ ] Metadata enrichment
+
+## Feature Checklist (Details)
+
+### Homepage Sections
+
+- [ ] Global search bar
+- [ ] Featured tools
+- [ ] Popular categories
+- [ ] Free tools
+- [ ] Beginner-friendly tools
+- [ ] Trending tools
+
+### Tool Details Page
+
+- [ ] Name, logo, tagline, short and full descriptions
+- [ ] Developer/company
+- [ ] Categories and tags
+- [ ] Main and secondary features
+- [ ] Best for + use cases
+- [ ] Input/output + platform support
+- [ ] Pricing details
+- [ ] Pros, cons, limitations
+- [ ] FAQ
+- [ ] Alternatives + related tools
+- [ ] Privacy/trust details
+- [ ] Last updated date
+
+### SEO Pages (Later)
+
+- [ ] `/tools/[slug]`
+- [ ] `/categories/[category]`
+- [ ] `/collections/[slug]`
+- [ ] `/compare/[slug]`
+
+## Technical Notes
+
+### Data Quality Rules
+
+- [ ] Unique `id` for every tool
+- [ ] Unique `slug` for every tool
+- [ ] Valid `pricing` object
+- [ ] Valid `platforms` object
+- [ ] No duplicate records
+
+### Suggested Utilities
+
+- [ ] `loadTools`
+- [ ] `searchTools`
+- [ ] `filterTools`
+- [ ] `getRelatedTools`
+- [ ] `compareTools`
+
+## Do Not Do Early
+
+- [ ] Avoid heavy animations
+- [ ] Avoid over-complex UI
+- [ ] Avoid backend before MVP proof
+- [ ] Avoid building 100 features at once
+
+## Weekly Execution Rhythm
+
+- [ ] Monday: data updates + normalization
+- [ ] Tuesday: search/filter improvements
+- [ ] Wednesday: tool page quality
+- [ ] Thursday: compare + related tools
+- [ ] Friday: SEO/content and cleanup
+
+## Definition of MVP Done
+
+- [ ] At least 50 tools with clean metadata
+- [ ] Search returns useful ranked results
+- [ ] Filters work reliably
+- [ ] Tool pages are complete and readable
+- [ ] Compare works for 2-3 tools
+- [ ] Site is fast and mobile-friendly
