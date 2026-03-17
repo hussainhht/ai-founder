@@ -31,7 +31,7 @@ Build a fast website where users can:
 
 ### 2) Core Pages
 
-- [ ] Homepage with global search and key sections
+- [x] Homepage with global search and key sections
 - [ ] Tool details page (`/tools/[slug]`)
 - [ ] Category page (`/categories/[category]`)
 - [ ] Compare page (`/compare`)
@@ -59,10 +59,10 @@ Build a fast website where users can:
 
 ### Phase 1: MVP Build
 
-- [ ] Folder structure
+- [x] Folder structure
 - [ ] Tool schema + template
 - [ ] 10 sample tools
-- [ ] Homepage
+- [x] Homepage
 - [ ] Tool page
 - [ ] Basic search
 - [ ] Basic filters
@@ -95,9 +95,9 @@ Build a fast website where users can:
 
 ### Homepage Sections
 
-- [ ] Global search bar
-- [ ] Featured tools
-- [ ] Popular categories
+- [x] Global search bar
+- [x] Featured tools
+- [x] Popular categories
 - [ ] Free tools
 - [ ] Beginner-friendly tools
 - [ ] Trending tools
