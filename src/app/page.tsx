@@ -47,48 +47,6 @@ export default function HomePage() {
   return (
     <main className="min-h-screen bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <header className="sticky top-0 z-10 border-b border-slate-200 bg-slate-50/90 backdrop-blur dark:border-slate-800 dark:bg-slate-950/90">
-          <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between">
-            <div className="text-xl font-bold tracking-tight">AI Founder</div>
-
-            <ul className="hidden items-center gap-8 text-sm font-medium md:flex">
-              <li>
-                <Link href="/" className="text-slate-700 transition hover:text-slate-900 dark:text-slate-300 dark:hover:text-white">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/explore"
-                  className="text-slate-700 transition hover:text-slate-900 dark:text-slate-300 dark:hover:text-white"
-                >
-                  Tools
-                </Link>
-              </li>
-              <li>
-                <a href="#categories" className="text-slate-700 transition hover:text-slate-900 dark:text-slate-300 dark:hover:text-white">
-                  Categories
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#featured-tools"
-                  className="text-slate-700 transition hover:text-slate-900 dark:text-slate-300 dark:hover:text-white"
-                >
-                  Compare
-                </a>
-              </li>
-            </ul>
-
-            <Link
-              href="/explore"
-              className="rounded-lg bg-slate-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-slate-700 dark:bg-teal-600 dark:hover:bg-teal-500"
-            >
-              Explore Tools
-            </Link>
-          </nav>
-        </header>
-
         <section className="py-16 sm:py-20">
           <div className="mx-auto max-w-3xl text-center">
             <p className="mb-4 inline-flex rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-medium text-slate-600 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300">
