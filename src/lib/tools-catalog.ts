@@ -19,6 +19,15 @@ type RawCatalog = {
 
 const rawCatalog = catalog as RawCatalog;
 
+function normalizeCategoryValue(value: string): string {
+  return value
+    .toLowerCase()
+    .replace(/[+_]/g, "-")
+    .replace(/\s+/g, "-")
+    .replace(/-{2,}/g, "-")
+    .trim();
+}
+
 function normalizeList(value: unknown): string[] {
   if (!Array.isArray(value)) {
     return [];
@@ -33,20 +42,26 @@ export function getCatalogTools(): CatalogTool[] {
   const tools = Array.isArray(rawCatalog.tools) ? rawCatalog.tools : [];
 
   return tools
-    .map((tool) => ({
-      id: typeof tool.id === "string" ? tool.id : "",
-      name: typeof tool.name === "string" ? tool.name : "Unknown Tool",
-      categories: normalizeList(tool.categories),
-      useCases: normalizeList(tool.useCases),
-      officialUrl: typeof tool.officialUrl === "string" ? tool.officialUrl : "",
-      pricing: typeof tool.pricing === "string" ? tool.pricing : "unknown",
-      availability: typeof tool.availability === "string" ? tool.availability : "unknown",
-      platforms: normalizeList(tool.platforms),
-      shortDescription:
-        typeof tool.shortDescription === "string"
-          ? tool.shortDescription
-          : "No description available yet.",
-    }))
+    .map((tool) => {
+      const rawCategories = normalizeList(tool.categories)
+        .map(normalizeCategoryValue)
+        .filter((category, index, list) => list.indexOf(category) === index);
+
+      return {
+        id: typeof tool.id === "string" ? tool.id : "",
+        name: typeof tool.name === "string" ? tool.name : "Unknown Tool",
+        categories: rawCategories,
+        useCases: normalizeList(tool.useCases),
+        officialUrl: typeof tool.officialUrl === "string" ? tool.officialUrl : "",
+        pricing: typeof tool.pricing === "string" ? tool.pricing : "unknown",
+        availability: typeof tool.availability === "string" ? tool.availability : "unknown",
+        platforms: normalizeList(tool.platforms),
+        shortDescription:
+          typeof tool.shortDescription === "string"
+            ? tool.shortDescription
+            : "No description available yet.",
+      };
+    })
     .filter((tool) => tool.name !== "Unknown Tool")
     .sort((a, b) => a.name.localeCompare(b.name));
 }

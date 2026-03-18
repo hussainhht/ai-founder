@@ -1,4 +1,10 @@
 import Link from "next/link";
+import {
+  getDisplayCategories,
+  getDisplayCategoriesForTool,
+  getMappedCategoriesForSelection,
+  toolMatchesAnyDisplayCategories,
+} from "@/lib/display-categories";
 import { getCatalogCount, getCatalogTools } from "@/lib/tools-catalog";
 
 type ExplorePageProps = {
@@ -12,6 +18,10 @@ type ExplorePageProps = {
 };
 
 function toLabel(value: string): string {
+  if (/[A-Z]/.test(value) && /\s|&/.test(value)) {
+    return value;
+  }
+
   return value
     .replace(/[_+]/g, " ")
     .replace(/-/g, " ")
@@ -32,11 +42,11 @@ function readParam(value: string | string[] | undefined): string {
 
 function readParamList(value: string | string[] | undefined): string[] {
   if (typeof value === "string") {
-    return value.trim() ? [value.trim().toLowerCase()] : [];
+    return value.trim() ? [value.trim()] : [];
   }
 
   if (Array.isArray(value)) {
-    return value.map((item) => item.trim().toLowerCase()).filter(Boolean);
+    return value.map((item) => item.trim()).filter(Boolean);
   }
 
   return [];
@@ -46,21 +56,23 @@ export default function ExplorePage({ searchParams }: ExplorePageProps) {
   const allTools = getCatalogTools();
   const query = readParam(searchParams?.q);
   const selectedCategories = readParamList(searchParams?.category);
-  const selectedPricing = readParamList(searchParams?.pricing);
-  const selectedPlatforms = readParamList(searchParams?.platform);
-  const selectedAvailability = readParamList(searchParams?.availability);
+  const selectedPricing = readParam(searchParams?.pricing).toLowerCase();
+  const selectedPlatform = readParam(searchParams?.platform).toLowerCase();
+  const selectedAvailability = readParam(searchParams?.availability).toLowerCase();
 
   const categoryCountMap = new Map<string, number>();
-  allTools.forEach((tool) => {
-    tool.categories.forEach((category) => {
-      categoryCountMap.set(category, (categoryCountMap.get(category) ?? 0) + 1);
-    });
+  getDisplayCategories().forEach((displayCategory) => {
+    const matchedCount = allTools.filter((tool) => toolMatchesAnyDisplayCategories(tool.categories, [displayCategory])).length;
+    categoryCountMap.set(displayCategory, matchedCount);
   });
 
   const categories = Array.from(categoryCountMap.entries())
+    .filter(([, count]) => count > 0)
     .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
     .slice(0, 10)
     .map(([category]) => category);
+
+  const mappedSelectedInternalCategories = getMappedCategoriesForSelection(selectedCategories);
 
   const pricingOptions = Array.from(new Set(allTools.map((tool) => tool.pricing))).sort((a, b) =>
     a.localeCompare(b),
@@ -72,28 +84,36 @@ export default function ExplorePage({ searchParams }: ExplorePageProps) {
     a.localeCompare(b),
   );
   const totalSelectedFilters =
-    selectedCategories.length + selectedPricing.length + selectedPlatforms.length + selectedAvailability.length;
+    selectedCategories.length + Number(Boolean(selectedPricing)) + Number(Boolean(selectedPlatform)) + Number(Boolean(selectedAvailability));
 
   const filteredTools = allTools.filter((tool) => {
-    const haystack = [tool.name, tool.shortDescription, ...tool.categories, ...tool.useCases].join(" ").toLowerCase();
+    const haystack = [
+      tool.name,
+      tool.shortDescription,
+      ...tool.categories,
+      ...getDisplayCategoriesForTool(tool.categories),
+      ...tool.useCases,
+    ]
+      .join(" ")
+      .toLowerCase();
 
     if (query && !haystack.includes(query.toLowerCase())) {
       return false;
     }
 
-    if (selectedCategories.length > 0 && !selectedCategories.some((category) => tool.categories.includes(category))) {
+    if (selectedCategories.length > 0 && !toolMatchesAnyDisplayCategories(tool.categories, selectedCategories)) {
       return false;
     }
 
-    if (selectedPricing.length > 0 && !selectedPricing.includes(tool.pricing)) {
+    if (selectedPricing && tool.pricing !== selectedPricing) {
       return false;
     }
 
-    if (selectedPlatforms.length > 0 && !selectedPlatforms.some((platform) => tool.platforms.includes(platform))) {
+    if (selectedPlatform && !tool.platforms.includes(selectedPlatform)) {
       return false;
     }
 
-    if (selectedAvailability.length > 0 && !selectedAvailability.includes(tool.availability)) {
+    if (selectedAvailability && tool.availability !== selectedAvailability) {
       return false;
     }
 
@@ -141,99 +161,73 @@ export default function ExplorePage({ searchParams }: ExplorePageProps) {
               </button>
             </div>
 
-            <div className="grid gap-3 lg:grid-cols-2">
-              <details className="rounded-lg border border-slate-200 bg-slate-50 p-2.5 dark:border-slate-700 dark:bg-slate-950" open>
-                <summary className="cursor-pointer text-sm font-semibold text-slate-800 dark:text-slate-100">
-                  Categories {selectedCategories.length > 0 ? `(${selectedCategories.length})` : ""}
-                </summary>
-                <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">Showing top 10 categories</p>
-                <div className="mt-2 grid max-h-44 gap-1.5 overflow-auto pr-1 sm:grid-cols-2">
-                  {categories.map((category) => (
-                    <label
-                      key={category}
-                      className="flex items-center gap-2 rounded-md px-1 py-0.5 text-xs text-slate-700 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800"
-                    >
+            <div className="rounded-xl border border-slate-200 bg-slate-50 p-3 dark:border-slate-700 dark:bg-slate-950">
+              <div className="mb-2 flex items-center justify-between gap-2">
+                <p className="text-sm font-semibold text-slate-800 dark:text-slate-100">Categories</p>
+                <p className="text-xs text-slate-500 dark:text-slate-400">Top 10</p>
+              </div>
+
+              <div className="-mx-1 mb-3 flex flex-wrap gap-2 px-1">
+                {categories.map((category) => {
+                  const checked = selectedCategories.includes(category);
+
+                  return (
+                    <label key={category} className="cursor-pointer">
                       <input
                         type="checkbox"
                         name="category"
                         value={category}
-                        defaultChecked={selectedCategories.includes(category)}
-                        className="h-3.5 w-3.5 rounded border-slate-300 dark:border-slate-600"
+                        defaultChecked={checked}
+                        className="peer sr-only"
                       />
-                      <span>{toLabel(category)}</span>
+                      <span className="inline-flex rounded-full border border-slate-300 bg-white px-3 py-1 text-xs font-medium text-slate-700 transition peer-checked:border-indigo-500 peer-checked:bg-indigo-600 peer-checked:text-white hover:border-slate-400 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:border-slate-500 dark:peer-checked:border-indigo-400 dark:peer-checked:bg-indigo-500">
+                        {toLabel(category)}
+                      </span>
                     </label>
-                  ))}
-                </div>
-              </details>
+                  );
+                })}
+              </div>
 
-              <details className="rounded-lg border border-slate-200 bg-slate-50 p-2.5 dark:border-slate-700 dark:bg-slate-950">
-                <summary className="cursor-pointer text-sm font-semibold text-slate-800 dark:text-slate-100">
-                  Platforms {selectedPlatforms.length > 0 ? `(${selectedPlatforms.length})` : ""}
-                </summary>
-                <div className="mt-2 grid max-h-44 gap-1.5 overflow-auto pr-1 sm:grid-cols-2">
-                  {platformOptions.map((platform) => (
-                    <label
-                      key={platform}
-                      className="flex items-center gap-2 rounded-md px-1 py-0.5 text-xs text-slate-700 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800"
-                    >
-                      <input
-                        type="checkbox"
-                        name="platform"
-                        value={platform}
-                        defaultChecked={selectedPlatforms.includes(platform)}
-                        className="h-3.5 w-3.5 rounded border-slate-300 dark:border-slate-600"
-                      />
-                      <span>{toLabel(platform)}</span>
-                    </label>
-                  ))}
-                </div>
-              </details>
-
-              <details className="rounded-lg border border-slate-200 bg-slate-50 p-2.5 dark:border-slate-700 dark:bg-slate-950">
-                <summary className="cursor-pointer text-sm font-semibold text-slate-800 dark:text-slate-100">
-                  Pricing {selectedPricing.length > 0 ? `(${selectedPricing.length})` : ""}
-                </summary>
-                <div className="mt-2 grid max-h-44 gap-1.5 overflow-auto pr-1 sm:grid-cols-2">
+              <div className="grid gap-2 sm:grid-cols-3">
+                <select
+                  name="pricing"
+                  defaultValue={selectedPricing}
+                  className="h-9 rounded-lg border border-slate-300 bg-white px-2.5 text-xs text-slate-700 outline-none focus:border-slate-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200"
+                >
+                  <option value="">Any Pricing</option>
                   {pricingOptions.map((pricing) => (
-                    <label
-                      key={pricing}
-                      className="flex items-center gap-2 rounded-md px-1 py-0.5 text-xs text-slate-700 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800"
-                    >
-                      <input
-                        type="checkbox"
-                        name="pricing"
-                        value={pricing}
-                        defaultChecked={selectedPricing.includes(pricing)}
-                        className="h-3.5 w-3.5 rounded border-slate-300 dark:border-slate-600"
-                      />
-                      <span>{toLabel(pricing)}</span>
-                    </label>
+                    <option key={pricing} value={pricing}>
+                      {toLabel(pricing)}
+                    </option>
                   ))}
-                </div>
-              </details>
+                </select>
 
-              <details className="rounded-lg border border-slate-200 bg-slate-50 p-2.5 dark:border-slate-700 dark:bg-slate-950">
-                <summary className="cursor-pointer text-sm font-semibold text-slate-800 dark:text-slate-100">
-                  Availability {selectedAvailability.length > 0 ? `(${selectedAvailability.length})` : ""}
-                </summary>
-                <div className="mt-2 grid max-h-44 gap-1.5 overflow-auto pr-1 sm:grid-cols-2">
-                  {availabilityOptions.map((availability) => (
-                    <label
-                      key={availability}
-                      className="flex items-center gap-2 rounded-md px-1 py-0.5 text-xs text-slate-700 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800"
-                    >
-                      <input
-                        type="checkbox"
-                        name="availability"
-                        value={availability}
-                        defaultChecked={selectedAvailability.includes(availability)}
-                        className="h-3.5 w-3.5 rounded border-slate-300 dark:border-slate-600"
-                      />
-                      <span>{toLabel(availability)}</span>
-                    </label>
+                <select
+                  name="platform"
+                  defaultValue={selectedPlatform}
+                  className="h-9 rounded-lg border border-slate-300 bg-white px-2.5 text-xs text-slate-700 outline-none focus:border-slate-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200"
+                >
+                  <option value="">Any Platform</option>
+                  {platformOptions.map((platform) => (
+                    <option key={platform} value={platform}>
+                      {toLabel(platform)}
+                    </option>
                   ))}
-                </div>
-              </details>
+                </select>
+
+                <select
+                  name="availability"
+                  defaultValue={selectedAvailability}
+                  className="h-9 rounded-lg border border-slate-300 bg-white px-2.5 text-xs text-slate-700 outline-none focus:border-slate-500 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200"
+                >
+                  <option value="">Any Availability</option>
+                  {availabilityOptions.map((availability) => (
+                    <option key={availability} value={availability}>
+                      {toLabel(availability)}
+                    </option>
+                  ))}
+                </select>
+              </div>
             </div>
 
             <div className="flex items-center justify-between gap-3">
@@ -247,6 +241,13 @@ export default function ExplorePage({ searchParams }: ExplorePageProps) {
                 Reset all filters
               </Link>
             </div>
+
+            {selectedCategories.length > 0 && (
+              <p className="text-xs text-slate-500 dark:text-slate-400">
+                Filtering internal categories: {mappedSelectedInternalCategories.slice(0, 8).map(toLabel).join(", ")}
+                {mappedSelectedInternalCategories.length > 8 ? "..." : ""}
+              </p>
+            )}
           </form>
         </header>
 
@@ -268,14 +269,16 @@ export default function ExplorePage({ searchParams }: ExplorePageProps) {
                 <p className="mt-2 text-sm text-slate-600 dark:text-slate-300">{tool.shortDescription}</p>
 
                 <div className="mt-4 flex flex-wrap gap-2">
-                  {tool.categories.slice(0, 3).map((category) => (
+                  {getDisplayCategoriesForTool(tool.categories)
+                    .slice(0, 3)
+                    .map((category) => (
                     <span
                       key={category}
                       className="rounded-full border border-slate-200 bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-300"
                     >
                       {toLabel(category)}
                     </span>
-                  ))}
+                    ))}
                 </div>
 
                 <div className="mt-4 space-y-1 text-xs text-slate-500 dark:text-slate-400">
