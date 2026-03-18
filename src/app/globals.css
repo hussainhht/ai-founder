@@ -7,6 +7,11 @@
   --foreground: #0f172a;
 }
 
+.dark {
+  --background: #020617;
+  --foreground: #e2e8f0;
+}
+
 body {
   background:
     radial-gradient(circle at top left, rgba(16, 185, 129, 0.08), transparent 50%),
@@ -14,6 +19,13 @@ body {
     var(--background);
   color: var(--foreground);
   font-family: var(--font-manrope), sans-serif;
+}
+
+.dark body {
+  background:
+    radial-gradient(circle at top left, rgba(20, 184, 166, 0.12), transparent 45%),
+    radial-gradient(circle at top right, rgba(59, 130, 246, 0.1), transparent 40%),
+    var(--background);
 }
 
 h1,

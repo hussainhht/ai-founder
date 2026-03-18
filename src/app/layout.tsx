@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Manrope, Space_Grotesk } from "next/font/google";
+import ThemeToggle from "@/components/theme-toggle";
 import "./globals.css";
 
 const manrope = Manrope({
@@ -23,8 +24,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${manrope.variable} ${spaceGrotesk.variable} bg-background text-foreground antialiased`}>
+        <ThemeToggle />
         {children}
       </body>
     </html>
